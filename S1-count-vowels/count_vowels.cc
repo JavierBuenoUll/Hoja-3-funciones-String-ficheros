@@ -31,23 +31,18 @@ void CountVowels(const std::string& text) {
   for (char caracter : text) {
     switch (caracter) {
       case 'A':
-      contador++;
       case 'E':
-      contador++;
       case 'I':
-      contador++;
       case 'O':
-      contador++;
       case 'U':
-      contador++;
       case 'a':
-      contador++;
       case 'e':
-      contador++;
       case 'o':
-      contador++;
       case 'u':
       contador++;
+      break;
+    default:
+      break;
     }
   }
   std::cout << "En " << text << " hay " << contador << " vocales.\n";
