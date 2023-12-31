@@ -13,9 +13,9 @@ CXXFLAGS = -std=c++17 -g -Wall	 # The C++ compiler options (C++14, preserve debu
 LDFLAGS =						             # The linker options (if any)
 
 # The all target builds all of the programs handled by the makefile.
-all: taylor-seno-coseno
+all: my_wc
 
-taylor-seno-coseno: taylor-seno-coseno.o taylor-seno-coseno_main.o
+my_wc: my_wc.o my_wc_main.o
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Indicate that the all and clean targets do not
@@ -32,7 +32,7 @@ taylor-seno-coseno: taylor-seno-coseno.o taylor-seno-coseno_main.o
 # and object files produced by the build process
 # We can use it for additional housekeeping purposes
 clean :
-	rm -f *.o taylor-seno-coseno doc
+	rm -f *.o my_wc doc
 	rm -rf *~ basura b i
 	rm -rf a.out
 	find . -name '*~' -exec rm {} \;
